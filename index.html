@@ -7,6 +7,7 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 <link rel="stylesheet" href="./assets/css/style.css">
 <title>Weather Dashboard</title>
 </head>
@@ -31,21 +32,25 @@
     <!-- Dashboard -->
     <div class='container justify-content-center' id='main-dashboard-container'>
       <h1 class='title row justify-content-center'>Weather Dashboard</h1>
-      <h2 class="todays-date row justify-content-center">Today is August 19, 2021</h2>
+      <h2 class="todays-date row justify-content-center"></h2>
       <div id='search-location' class="input-group row justify-content-center">
         <div class="form-outline">
-          <input id="search-input" type="search" id="form1" class="form-control" value='Enter City Name' />
+          <input id="search-input" type="text" class="form-control" value='Enter City Name' />
         </div>
         <button id="search-button" type="button" class="btn btn-primary">
           <i id="search-icon" class="fas fa-search"></i>
         </button>
+      </div>
+      <div id='search-history' class='row'>
+        <ul id='history-list'>
+        </ul>
       </div>
     </div>
 
     <!-- Today's Forecast -->
     <div class='container justify-content-center' id='main-todays-container'>
       <h1 class='title row justify-content-center'>Today's Forecast</h1>
-      <h2 class="todays-date row justify-content-center">Today is August 19, 2021</h2>
+      <h2 class="todays-date row justify-content-center"></h2>
       <div id='todays-weather-container' class='container justify-content-between'>
         <div id='todays-temp-row' class='row justify-content-around'>
           <div id='todays-temp' class='col-md-5'>
@@ -67,7 +72,7 @@
     <!-- 5-Day Forecast -->
     <div class='container justify-content-center' id='main-5-container'>
       <h1 class='title row justify-content-center'>5-Day Forecast</h1>
-      <h2 class="todays-date row justify-content-center">Today is August 19, 2021</h2>
+      <h2 class="todays-date row justify-content-center"></h2>
       <div id='five-container' class='container justify-content-between'>
         <div id='five-tomorrow-row' class='row justify-content-around'>
           <div id='five-tomorrow' class='col-md-10'>

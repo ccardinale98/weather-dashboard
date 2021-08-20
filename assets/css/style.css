@@ -62,7 +62,7 @@ body {
 
 .todays-date {
     margin-top: 15px;
-    color: #6c757d;   
+    color: var(--buttons);   
 }
 
 #search-location {
