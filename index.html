@@ -11,39 +11,82 @@
 <title>Weather Dashboard</title>
 </head>
 <body>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <button>Dashboard</button>
-        <button>Today's Weather</button>
-        <button>5-Day Forecast</button>
-        <button>Contact</button>
-      </div>
+   <!--Sidebar  -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <button id='dash-btn'>Dashboard</button>
+    <button id='todays-btn'>Today's Weather</button>
+    <button id='five-btn'>5-Day Forecast</button>
+    <button id='contact-btn'>Contact</button>
+  </div>
     
-    <div id='main'>  
-        <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" id='nav-btn' onclick='openNav()'>
-              <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
+  <div id='main'>  
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" id='nav-btn' onclick='openNav()'>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
 
-        <div class='container justify-content-center' id='main-dashboard-container'>
-            <h1 id='dashboard-title' class='row justify-content-center'>Weather Dashboard</h1>
-            <h2 id='todays-date' class="row justify-content-center">Today is August 19, 2021</h2>
-            <div id='search-location' class="input-group row justify-content-center">
-                <div class="form-outline">
-                  <input id="search-input" type="search" id="form1" class="form-control" value='Enter City Name' />
-                </div>
-                <button id="search-button" type="button" class="btn btn-primary">
-                  <i id="search-icon" class="fas fa-search"></i>
-                </button>
+    <!-- Dashboard -->
+    <div class='container justify-content-center' id='main-dashboard-container'>
+      <h1 class='title row justify-content-center'>Weather Dashboard</h1>
+      <h2 class="todays-date row justify-content-center">Today is August 19, 2021</h2>
+      <div id='search-location' class="input-group row justify-content-center">
+        <div class="form-outline">
+          <input id="search-input" type="search" id="form1" class="form-control" value='Enter City Name' />
+        </div>
+        <button id="search-button" type="button" class="btn btn-primary">
+          <i id="search-icon" class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Today's Forecast -->
+    <div class='container justify-content-center' id='main-todays-container'>
+      <h1 class='title row justify-content-center'>Today's Forecast</h1>
+      <h2 class="todays-date row justify-content-center">Today is August 19, 2021</h2>
+      <div id='todays-weather-container' class='container justify-content-between'>
+        <div id='todays-temp-row' class='row justify-content-around'>
+          <div id='todays-temp' class='col-md-5'>
+          </div> 
+          <div id='todays-uv-and-wind' class='col-md-5'>
+            <div id='todays-uv-index' class='row'>
             </div>
+            <div id='todays-wind' class='row'>
+            </div>
+          </div>
         </div>
+        <div class='row justify-content-around'>
+          <div id='todays-hourly' class='col-md-11'>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class='container justify-content-center' id='main-todays-container' hidden>
-            <h1 id='todays-title' class='row justify-content-center'>Today's Forecast</h1>
-            <h2 id='todays-date' class="row justify-content-center">Today is August 19, 2021</h2>
+    <!-- 5-Day Forecast -->
+    <div class='container justify-content-center' id='main-5-container'>
+      <h1 class='title row justify-content-center'>5-Day Forecast</h1>
+      <h2 class="todays-date row justify-content-center">Today is August 19, 2021</h2>
+      <div id='five-container' class='container justify-content-between'>
+        <div id='five-tomorrow-row' class='row justify-content-around'>
+          <div id='five-tomorrow' class='col-md-10'>
+          </div> 
         </div>
-    </div>  
+        <div id='five-day-row' class='row justify-content-around'>
+          <div id='five-day' class='container col-md-10'>
+            <div id='five-inner' class='row justify-content-around'>
+              <div id='day-2' class='day-box col-md-2'></div>
+              <div id='day-3' class='day-box col-md-2'></div>
+              <div id='day-4' class='day-box col-md-2'></div>
+              <div id='day-5' class='day-box col-md-2'></div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>

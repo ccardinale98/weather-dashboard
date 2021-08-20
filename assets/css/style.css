@@ -1,6 +1,7 @@
 :root {
     --text: #6c757d;
     --buttons: #727cf5;
+    --boxbg: #fff;
 }
 
 body {
@@ -53,13 +54,13 @@ body {
   }
 }
 
-#dashboard-title {
+.title {
     margin-top: 30px;
     color: #6c757d;
     font-size: 70px;
 }
 
-#todays-date {
+.todays-date {
     margin-top: 15px;
     color: #6c757d;   
 }
@@ -82,4 +83,63 @@ body {
     color: var(--text);
     font-size: 30px;
     padding-left: 30px;
+}
+
+/* Today's Forecast */
+#todays-temp-row {
+  margin-top: 50px;
+}
+
+#todays-temp {
+  border: none;
+  height: 270px;
+  margin-bottom: 20px;
+  background-color: var(--boxbg);
+}
+
+#todays-uv-index {
+  border: none;
+  height: 125px;
+  margin-bottom: 20px;
+  background-color: var(--boxbg)
+}
+
+#todays-wind {
+  border: none;
+  height: 125px;
+  background-color: var(--boxbg)
+}
+
+#todays-hourly {
+  border: none;
+  height: 270px;
+  margin-top: 50px;
+  background-color: var(--boxbg);
+}
+
+/* 5-Day Forecast */
+#five-tomorrow {
+  height: 270px;
+  background-color: var(--boxbg);
+  margin-top: 50px;
+}
+
+#five-day {
+  height: 270px;
+  background-color: var(--boxbg);
+  margin-top: 30px;
+  padding: 0px;
+}
+
+#five-inner {
+  padding: 30px;
+  margin: 0px 0px;
+  background-color: var(--boxbg)
+}
+
+.day-box {
+  background-color: #e7e9eb;
+  height: 200px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
