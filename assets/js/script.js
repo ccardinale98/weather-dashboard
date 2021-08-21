@@ -1,3 +1,4 @@
+$(document).ready(function () {
 var cityInputArray = [];
 var pastArray = [];
 var today = moment();
@@ -336,3 +337,4 @@ function showApiData () {
     console.log(error);
   });
 }
+});
