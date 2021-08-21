@@ -43,6 +43,7 @@
       </div>
       <div id='search-history' class='row'>
         <ul id='history-list'>
+          <li class='titles'>Search History: </li>
         </ul>
       </div>
     </div>
@@ -54,16 +55,30 @@
       <div id='todays-weather-container' class='container justify-content-between'>
         <div id='todays-temp-row' class='row justify-content-around'>
           <div id='todays-temp' class='col-md-5'>
+            <h2 class='titles'>Today's Temperature: </h2>
           </div> 
           <div id='todays-uv-and-wind' class='col-md-5'>
-            <div id='todays-uv-index' class='row'>
+            <div id='todays-uv-index' class='row justify-content-center'>
+              <div class='container'>
+                <h3 id='todays-uv-title' class='row justify-content-center titles'>UV Index: </h3>
+                <div id='todays-uv-div' class='row justify-content-center'></div>
+              </div>
             </div>
-            <div id='todays-wind' class='row'>
+            <div id='todays-wind' class='row justify-content-around'>
+              <h3 id='todays-wind-title' class='titles col-md-5'>Wind Speed: </h3>
+              <h3 id='todays-humidity' class='titles col-md-5'>Humidity: </h3>
             </div>
           </div>
         </div>
         <div class='row justify-content-around'>
           <div id='todays-hourly' class='col-md-11'>
+            <h2 class='titles'>Hourly Temperature: </h2>
+            <div id='hourly-inner-row' class='row justify-content-around'>
+              <div id='hour-1' class='hour-box day-box col-md-2'><p1 class='hours'>In 1 Hour: </p1></div>
+              <div id='hour-2' class='hour-box day-box col-md-2'><p1 class='hours'>In 2 Hours: </p1></div>
+              <div id='hour-3' class='hour-box day-box col-md-2'><p1 class='hours'>In 3 Hours: </p1></div>
+              <div id='hour-4' class='hour-box day-box col-md-2'><p1 class='hours'>In 4 Hours: </p1></div>
+            </div>
           </div>
         </div>
       </div>
@@ -75,16 +90,40 @@
       <h2 class="todays-date row justify-content-center"></h2>
       <div id='five-container' class='container justify-content-between'>
         <div id='five-tomorrow-row' class='row justify-content-around'>
-          <div id='five-tomorrow' class='col-md-10'>
+          <div id='five-tomorrow' class='container col-md-10'>
+            <div id='five-tomorrow-inner' class='row justify-content-around'>
+              <div id='five-tomorrow-temp' class='day-box col-md-5'>
+                <h2 class='titles'>Tomorrow's Temperature: </h2>
+                <div id='tomorrow-img-div' class='day-img'></div>
+              </div>
+              <div id='five-tomorrow-details' class='day-box col-md-4'>
+                <h2 class='titles'>Details: </h2>
+                <ul id='tomorrow-details'>
+                  <li id='tomorrow-uv-1'></li>
+                </ul>
+              </div>
+            </div>
           </div> 
         </div>
         <div id='five-day-row' class='row justify-content-around'>
           <div id='five-day' class='container col-md-10'>
             <div id='five-inner' class='row justify-content-around'>
-              <div id='day-2' class='day-box col-md-2'></div>
-              <div id='day-3' class='day-box col-md-2'></div>
-              <div id='day-4' class='day-box col-md-2'></div>
-              <div id='day-5' class='day-box col-md-2'></div>
+              <div id='day-2' class='day-box col-md-2'>
+                <ul id='day-2-ul' class='day-box-ul'></ul>
+                <div id='day-2-img' class='day-img'></div>
+              </div>
+              <div id='day-3' class='day-box col-md-2'>
+                <ul id='day-3-ul' class='day-box-ul'></ul>
+                <div id='day-3-img' class='day-img'></div>
+              </div>
+              <div id='day-4' class='day-box col-md-2'>
+                <ul id='day-4-ul' class='day-box-ul'></ul>
+                <div id='day-4-img' class='day-img'></div>
+              </div>
+              <div id='day-5' class='day-box col-md-2'>
+                <ul id='day-5-ul' class='day-box-ul'></ul>
+                <div id='day-5-img' class='day-img'></div>
+              </div>
             </div>
           </div>
         </div>

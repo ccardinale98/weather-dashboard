@@ -92,36 +92,52 @@ body {
 
 #todays-temp {
   border: none;
-  height: 270px;
-  margin-bottom: 20px;
+  height: 291px;
+  margin-bottom: 0px;
   background-color: var(--boxbg);
+  padding: 20px;
+  text-align: center;
 }
 
 #todays-uv-index {
   border: none;
   height: 125px;
   margin-bottom: 20px;
-  background-color: var(--boxbg)
+  background-color: var(--boxbg);
+  text-align: center;
+  padding: 20px;
+}
+
+.gray1 {
+  color: white;
 }
 
 #todays-wind {
   border: none;
-  height: 125px;
-  background-color: var(--boxbg)
+  height: fit-content;
+  min-height: 125px;
+  background-color: var(--boxbg);
+  text-align: center;
+  padding: 15px;
 }
 
 #todays-hourly {
   border: none;
-  height: 270px;
+  height: fit-content;
+  min-height: 125px;
   margin-top: 50px;
   background-color: var(--boxbg);
+  padding: 20px;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 /* 5-Day Forecast */
 #five-tomorrow {
-  height: 270px;
+  height: fit-content;
   background-color: var(--boxbg);
   margin-top: 50px;
+  padding: 20px;
 }
 
 #five-day {
@@ -129,17 +145,117 @@ body {
   background-color: var(--boxbg);
   margin-top: 30px;
   padding: 0px;
+  margin-bottom: 50px;
 }
 
 #five-inner {
   padding: 30px;
   margin: 0px 0px;
-  background-color: var(--boxbg)
+  background-color: var(--boxbg);
+  margin-bottom: 50px;
 }
 
 .day-box {
   background-color: #e7e9eb;
-  height: 200px;
+  min-height: 250px;
+  height: fit-content;
   margin-top: 5px;
   margin-bottom: 5px;
+  text-align: center;
+  min-width: 100px;
+}
+
+#five-tomrrow {
+  height: 270px;
+  background-color: var(--boxbg);
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#five-day-row {
+  margin-bottom: 50px;
+}
+
+#five-tomorrow-temp {
+  text-align: center;
+}
+
+#five-tomorrow-details {
+  text-align: center;
+}
+
+#five-tomorrow-inner {
+  padding: 0px;
+  margin: 0px 0px;
+  background-color: var(--boxbg)
+}
+
+.additions {
+  color: var(--text);
+}
+
+.titles {
+  color: var(--buttons);
+}
+
+.small-titles {
+  color: white;
+}
+
+.gray {
+  color: var(--text);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hour-box {
+  font-size: 25px;
+  padding-top: 35px;
+}
+
+#search-history {
+  justify-content: center;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 25px;
+}
+
+#todaysUVI {
+  color: white;
+}
+
+#tomorrow-details {
+  font-size: 23px;
+}
+
+#tomorrow-details li:nth-child(1) {
+  color: white;
+}
+
+#day-3-ul li:nth-child(2) {
+  color: white;
+}
+
+#day-4-ul li:nth-child(2) {
+  color: white;
+}
+
+#day-5-ul li:nth-child(2) {
+  color: white;
+}
+
+#day-2-ul li:nth-child(2) {
+  color: white;
+}
+
+.hours {
+  color: var(--text);
+}
+
+.history-list-class {
+  color: var(--text);
 }
