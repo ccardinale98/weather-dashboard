@@ -123,7 +123,7 @@ function showApiData () {
     imageIcons[0].parentNode.removeChild(imageIcons[0]);
   }
 
-  var requestUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=imperial&appid=" + APIKey;
+  var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=imperial&appid=" + APIKey;
   var requestUrl1Lon = ''
   var requestUrl1Lat = ''
   console.log(requestUrl)
