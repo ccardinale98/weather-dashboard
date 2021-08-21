@@ -85,7 +85,6 @@ body {
     padding-left: 30px;
 }
 
-/* Today's Forecast */
 #todays-temp-row {
   margin-top: 50px;
 }
@@ -132,7 +131,6 @@ body {
   text-align: center;
 }
 
-/* 5-Day Forecast */
 #five-tomorrow {
   height: fit-content;
   background-color: var(--boxbg);

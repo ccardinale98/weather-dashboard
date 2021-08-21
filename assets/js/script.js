@@ -5,10 +5,12 @@ $(document).ready(function () {
   var APIKey = '42ebbcabbd6bc88838ddb3a3c08682cb';
   var onLoad = ''
 
+  // if there is stuff in the local storage when you load the page it will store it in a variable
   if (localStorage.getItem('City') !== null) {
     onLoad = localStorage.getItem('City');
   }
 
+  //then it will put the on load storage into the search history
   var onLoadArray = onLoad.split(',')
   console.log(onLoadArray)
   if (onLoadArray) {
@@ -20,6 +22,7 @@ $(document).ready(function () {
     }
   }
 
+  // the nav buttons will open and close the nav bars
   $('#nav-btn').on('click', function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -30,12 +33,12 @@ $(document).ready(function () {
     document.getElementById("main").style.marginLeft = "0";
   })
 
+  // this is so the dashboard home page will be the only thing shown on load
   function loadDash() {
     $('#main-dashboard-container').show();
     $('#main-todays-container').hide();
     $('#main-5-container').hide();
   }
-
   loadDash()
 
   $('#dash-btn').on('click', loadDash)
@@ -54,9 +57,11 @@ $(document).ready(function () {
     $('#main-5-container').show();
   })
 
+  //gets todays date to populate the date section
   $(".todays-date").text('Today is ' + today.format("MMM Do, YYYY"));
   console.log(today);
 
+  //this is the main search button function that runs everything when pressed
   $('#search-button').on('click', function () {
     $('.history-list-class').html('');
     cityHistoryArray = [];
@@ -101,6 +106,7 @@ $(document).ready(function () {
     return
   })
 
+  //when the user clicks an option in the search history it will search for that option
   $('.history-list-class').on('click', function () {
     var cityInput = $(this).text()
     currentCity = cityInput;
@@ -111,6 +117,7 @@ $(document).ready(function () {
   })
 
   function showApiData () {
+    //this removes all the old data from the previous search before beginning the new one
     $('.additions').html('');
     $('.gray').html('');
     $('#todaysUVI').html('');
@@ -155,6 +162,7 @@ $(document).ready(function () {
       requestUrl1Lat = data.coord.lat
       requestUrl1Lon = data.coord.lon
 
+      //requesting the url with the uvi included since it was not in the original api
       var requestUrl1 = 'https://api.openweathermap.org/data/2.5/onecall?&lat=' + requestUrl1Lat + '&lon=' + requestUrl1Lon + '&units=imperial&appid=42ebbcabbd6bc88838ddb3a3c08682cb'
     
       fetch(requestUrl1)
